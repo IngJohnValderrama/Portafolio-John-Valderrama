@@ -1,0 +1,58 @@
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif; max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+  
+  <!-- Header -->
+  <div style="background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%); padding: 30px; text-align: center; color: white;">
+    <h1 style="margin: 0; font-size: 24px; font-weight: 700;">📧 Nuevo Mensaje de Contacto</h1>
+    <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 14px;">Portfolio - Formulario de Contacto</p>
+  </div>
+
+  <!-- Content -->
+  <div style="padding: 30px; color: #e2e8f0; line-height: 1.6;">
+    
+    <div style="font-size: 16px; margin-bottom: 20px; color: #cbd5e1;">
+      Hola,<br/>
+      Tienes un nuevo mensaje desde tu portfolio:
+    </div>
+
+    <!-- Mensaje -->
+    <div style="background: rgba(15, 23, 42, 0.5); border-left: 4px solid #0ea5e9; padding: 20px; margin: 20px 0; border-radius: 4px; font-style: italic; color: #f1f5f9;">
+      {{message}}
+    </div>
+
+    <!-- Información del Remitente -->
+    <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(148, 163, 184, 0.2);">
+      <h3 style="margin-top: 0; margin-bottom: 15px; color: #0ea5e9; font-size: 14px; font-weight: 600;">Información del Remitente</h3>
+      
+      <div style="display: flex; margin-bottom: 12px; align-items: flex-start;">
+        <div style="font-weight: 600; color: #0ea5e9; width: 100px; margin-right: 15px;">Nombre:</div>
+        <div style="color: #cbd5e1; word-break: break-all;">{{from_name}}</div>
+      </div>
+
+      <div style="display: flex; margin-bottom: 12px; align-items: flex-start;">
+        <div style="font-weight: 600; color: #0ea5e9; width: 100px; margin-right: 15px;">Email:</div>
+        <div style="color: #cbd5e1; word-break: break-all;">
+          <a href="mailto:{{from_email}}" style="color: #0ea5e9; text-decoration: none;">{{from_email}}</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="mailto:{{from_email}}" style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">
+        Responder al Email
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div style="background: rgba(15, 23, 42, 0.8); padding: 20px; text-align: center; font-size: 12px; color: #94a3b8; border-top: 1px solid rgba(148, 163, 184, 0.1);">
+    <p style="margin: 0; margin-bottom: 8px;">
+      Este correo fue enviado desde tu portfolio profesional.
+    </p>
+    <p style="margin: 0; opacity: 0.7;">
+      © 2026 John Ricardo Valderrama | Ingeniero de Sistemas
+    </p>
+  </div>
+
+</div>
