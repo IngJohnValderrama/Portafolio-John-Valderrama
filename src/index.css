@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 font-sans;
+  cursor: none;
+}
+
+.glass {
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background-color: rgba(255,255,255,0.03);
+}
+
+.blink-cursor::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 6px;
+  animation: blink 1s steps(2,start) infinite;
+}
+
+@keyframes blink { to { visibility: hidden; } }
+
+/* Hero background and particles */
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at 10% 20%, rgba(14,165,255,0.06) 0%, transparent 15%), radial-gradient(ellipse at 90% 80%, rgba(34,197,94,0.03) 0%, transparent 20%), linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+  overflow: hidden;
+}
+
+.hero-bg + canvas{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+}
+
+.particle{position:absolute;border-radius:50%;opacity:.8;filter:blur(.6px);animation:float 8s linear infinite}
+@keyframes float{0%{transform:translateY(0) scale(.9)}50%{transform:translateY(-20px) scale(1.05)}100%{transform:translateY(0) scale(.9)}}
+
+/* glass improvements */
+.glass{box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+
+/* project overlay */
+.project-overlay{transition:opacity .18s ease, transform .18s ease}
+
+/* hide default cursor area fallback */
+.no-cursor *{cursor:none}
+
+/* Storyteller styles */
+.story-node{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+.float-screenshot{position:absolute; transform-style:preserve-3d; transition:transform .22s ease, opacity .22s ease; will-change:transform; text-decoration:none}
+.float-screenshot .glass{backdrop-filter: blur(8px);}
+
+.perspective-1000{perspective:1200px}
+
+/* Cloud Console styles */
+.bg-zinc-950{background-color:#0f1724}
+.text-electric{color:#0ea5ff}
+
+:focus-visible{outline:none}
+:focus-visible, .focus-visible{outline:2px solid rgba(14,165,255,0.16); outline-offset:3px}
+
+*{transition:background-color .18s ease, color .18s ease, transform .12s ease, box-shadow .18s ease, border-color .18s ease}
+
+/* Glow effects */
+.glow-electric{box-shadow: 0 0 20px rgba(14, 165, 255, 0.3), 0 0 40px rgba(14, 165, 255, 0.1)}
+.glow-neon{box-shadow: 0 0 20px rgba(34, 197, 94, 0.2)}
+
+/* Button improvements */
+button:hover, a:hover{filter:brightness(1.05)}
+button:active, a:active{filter:brightness(0.98)}
+
+
+
