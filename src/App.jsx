@@ -5,7 +5,6 @@ import ProjectShowcase from './components/ProjectShowcase'
 import Timeline from './components/Timeline'
 import Cursor from './components/Cursor'
 import About from './components/About'
-import CloudConsole from './components/CloudConsole'
 import TechStack from './components/TechStack'
 import BentoGrid from './components/BentoGrid'
 import Contact from './components/Contact'
@@ -18,10 +17,10 @@ export default function App() {
       <div className="max-w-5xl mx-auto space-y-12">
         <Hero />
         <About />
+        <ProjectShowcase />
+        <TerminalSkills />
         <TechStack />
         <BentoGrid />
-        <TerminalSkills />
-        <ProjectShowcase />
         <Timeline />
         <Contact />
       </div>
